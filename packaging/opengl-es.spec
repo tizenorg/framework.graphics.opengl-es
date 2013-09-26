@@ -54,6 +54,8 @@ metapackage for development files of the OpenGL ES library
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/license
+cp LICENSE %{buildroot}/usr/share/license/%{name}
 
 mkdir -p %{buildroot}%{_libdir}/pkgconfig
 cp -a ./%{PKGPATH}/*.pc %{buildroot}%{_libdir}/pkgconfig/
@@ -62,6 +64,7 @@ cp -a ./%{PKGPATH}/*.pc %{buildroot}%{_libdir}/pkgconfig/
 %files
 %manifest opengl-es.manifest
 %defattr(-,root,root,-)
+/usr/share/license/%{name}
 
 %files devel
 %defattr(-,root,root,-)
