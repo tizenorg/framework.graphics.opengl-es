@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: opengl-es-20
+Description: OpenGL-ES 2.0 Library
+Version: 0.1
+Requires: glesv2
+Libs: -L${libdir}
+Cflags: -I${includedir}

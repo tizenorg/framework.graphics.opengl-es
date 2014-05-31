@@ -1,0 +1,28 @@
+Source: opengl-es
+Section: libs
+Priority: extra
+Maintainer: Minsu Han <minsu81.han@samsung.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: opengl-es
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+		 opengl-es-drv [ armel ],
+		 simulator-opengl [ i386 ]
+Description: metapackage for the OpenGL ES library
+ This is a meta package that will point to the latest OpenGL ES driver.
+ .
+ It does not provide any drivers itself.
+
+Package: opengl-es-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+		 opengl-es,
+		 opengl-es-drv-dev [ armel ],
+		 simulator-opengl-dev [ i386 ]
+Description: metapackage for development files of the OpenGL ES library
+ This is a meta package that will point to the latest development libraries,
+ header files needed by programs that want to compile with OpenGL ES.
+ .
+ It does not provide any development files itself.
