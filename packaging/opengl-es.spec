@@ -11,11 +11,7 @@ Release:    4
 Group:      libs
 License:    samsung
 Source0:    %{name}-%{version}.tar.gz
-%ifarch %{ix86}
-Requires:   emulator-yagl
-%else
 Requires:   opengl-es-drv
-%endif
 
 
 %description
