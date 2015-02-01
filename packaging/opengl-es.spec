@@ -1,3 +1,4 @@
+#sbs-git:slp/pkgs/o/opengl-es opengl-es 0.1.1 0d774b1127022844afc7e7eb99b76bedb95f8fe9
 %ifarch %{ix86}
 %define PKGPATH "pkgconfig_i686"
 %else
@@ -6,7 +7,7 @@
 
 Name:       opengl-es
 Summary:    metapackage for the OpenGL ES library
-Version:    0.1.4
+Version:    0.1.3
 Release:    4
 Group:      libs
 License:    samsung
@@ -48,11 +49,8 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}%{_libdir}/pkgconfig
 cp -a ./%{PKGPATH}/*.pc %{buildroot}%{_libdir}/pkgconfig/
 
-mkdir -p %{buildroot}/usr/share/license
-cp LICENSE %{buildroot}/usr/share/license/%{name}
 
 %files
-/usr/share/license/%{name}
 %manifest opengl-es.manifest
 %defattr(-,root,root,-)
 
