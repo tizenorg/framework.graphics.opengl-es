@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: opengl-es-11
 Description: OpenGL-ES 1.1 Library
 Version: 0.1
-Requires: opengl
+Requires: gles11
 Libs: -L${libdir}
 Cflags: -I${includedir}

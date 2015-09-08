@@ -7,16 +7,12 @@
 
 Name:       opengl-es
 Summary:    metapackage for the OpenGL ES library
-Version:    0.1.1
-Release:    2
+Version:    0.1.3
+Release:    4
 Group:      libs
-License:    samsung
+License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
-%ifarch %{ix86}
-Requires:   simulator-opengl
-%else
 Requires:   opengl-es-drv
-%endif
 
 
 %description
@@ -29,11 +25,7 @@ metapackage for the OpenGL ES library
 Summary:    metapackage for development files of the OpenGL ES library
 Group:      libs
 Requires:   %{name} = %{version}-%{release}
-%ifnarch %{ix86}
 Requires:   opengl-es-drv-devel
-%else
-Requires:   simulator-opengl-devel
-%endif
 
 %description devel
 metapackage for development files of the OpenGL ES library
@@ -59,6 +51,7 @@ cp -a ./%{PKGPATH}/*.pc %{buildroot}%{_libdir}/pkgconfig/
 
 
 %files
+%manifest opengl-es.manifest
 %defattr(-,root,root,-)
 
 %files devel

@@ -6,6 +6,6 @@ includedir=${prefix}/include
 Name: opengl-es-20
 Description: OpenGL-ES 2.0 Library
 Version: 0.1
-Requires: opengl2
+Requires: gles20
 Libs: -L${libdir}
 Cflags: -I${includedir}
