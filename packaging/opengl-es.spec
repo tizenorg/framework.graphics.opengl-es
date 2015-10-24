@@ -13,7 +13,7 @@ Group:      libs
 License:    Apache-2.0
 Source0:    %{name}-%{version}.tar.gz
 Requires:   opengl-es-drv
-
+ExcludeArch: %{arm}
 
 %description
 metapackage for the OpenGL ES library
